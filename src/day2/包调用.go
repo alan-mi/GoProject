@@ -20,19 +20,15 @@ func main() {
 		}
 	}
 	print("=================")
-	var (
-		name string
-		age  int
-	)
+
 	mkrand()
-	fmt.Println("请输入年龄")
-	n, e := fmt.Scanln(&name, &age)
-	print(n, e.Error())
-	fmt.Printf("%c", e.Error())
 
 }
 
 func mkrand() {
+	s := time.Now()
 	s1 := rand.New(rand.NewSource(time.Now().UnixNano()))
 	print(s1.Intn(10))
+	b := time.Since(s)
+	fmt.Print(b)
 }
