@@ -17,10 +17,16 @@ func main() {
 		sex:  true,
 	}
 	zhizhen(ming)
+	sums(2, 4, 2, 34, 3)
 }
 
 func sums(sum ...int) {
 	fmt.Print(sum)
+	println(len(sum))
+	fmt.Println(sum[0:2])
+	for _, v := range sum {
+		fmt.Println(v)
+	}
 }
 
 func digui(a int64) int64 {
